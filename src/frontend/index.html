@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <h1>
+        Welcome to the frontpage.
+    </h1>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+
+    <table class="register-form">
+        <label for="create">Create a client</label><br>
+        <br>
+        <input type="text" id="firstName" placeholder="First name"/>
+        <input type="text" id="lastName" placeholder="Last name"/>
+        <input type="text" id="streetAddress" placeholder="Street address"/>
+        <input type="text" id="city" placeholder="City"/>
+        <input type="submit" id="submitClient" value="Submit" onclick= "createClient()"/> 
+        </p>
+    </table>  
+<br>
+<br>
+<table class="updateregister-form">
+    <label for="create">Update a client</label><br>
+    <br>
+    <input type="text" id="updateClientId" placeholder="Client id"/>
+    <input type="text" id="updateFirstName" placeholder="First name"/>
+    <input type="text" id="updateLastName" placeholder="Last name"/>
+    <input type="text" id="updateStreetAddress" placeholder="Street address"/>
+    <input type="text" id="updateCity" placeholder="City"/>
+    <input type="submit" id="submitClient" value="Submit" onclick= "updateClient()"/> 
+    </p>
+</table>  
+<br>
+<br>
+<table class="deleteregister-form">
+    <label for="create">Delete a client</label><br>
+    <br>
+    <input type="text" id="deleteClientId" placeholder="Client id"/>
+    <input type="submit" id="submitClient" value="Submit" onclick= "deleteClient()"/> 
+    </p>
+</table>  
+<br>
+<br>
+<table class="getregister-form">
+    <label for="create">Get a client</label><br>
+    <br>
+    <input type="text" id="getClientId" placeholder="Client id"/>
+    <input type="submit" id="submitClient" value="Submit" onclick= "getClient()"/> 
+    <p id="getFirstName"></p>
+    <p id="getLastName"></p>
+    <p id="getStreetAddress"></p>
+    <p id="getCity"></p>
+    </p>
+</table>  
+<br>
+<br>
+<br>
+<br>
+<form class="reservation-form">
+    <label for="create">Make reservation</label><br><br>
+    <input type="text" id="clientId1" placeholder="Client id"/>
+    <input type="date" id="date" placeholder="Date"/>
+    <input type="text" id="hotelName" placeholder="Hotel name"/>
+    <input type="text" id="price" placeholder="Price"/>
+    <input type="text" id="balance" placeholder="Balance"/>
+      </select>
+    <input type="submit" id="submitReservation" value="Submit" onclick= "createReservation()"/> 
+    </p>
+</form>  
+<br>
+<br>
+<form class="updatereservation-form">
+    <label for="create">Update reservation</label><br><br>
+    <input type="text" id="updateReservationId" placeholder="reservation id"/>
+    <input type="text" id="updateClientId1" placeholder="client id"/>
+    <input type="date" id="updateDate" placeholder="Date"/>
+    <input type="text" id="updateHotelName" placeholder="Hotel name"/>
+    <input type="text" id="updatePrice" placeholder="Price"/>
+    <input type="text" id="updateBalance" placeholder="Balance"/>
+    <input type="submit" id="submitReservation" value="Submit" onclick= "updateReservation()"/> 
+    </p>
+</form> 
+<br>
+<br>
+<table class="deletereservation-form">
+    <label for="create">Delete a reservation</label><br>
+    <br>
+    <input type="text" id="deleteReservationId" placeholder="reservation id"/>
+    <input type="submit" id="submitReservation" value="Submit" onclick= "deleteReservation()"/> 
+    </p>
+</table>  
+<br>
+<br>
+<table class="getreservation-form">
+    <label for="create">Get a reservation</label><br>
+    <br>
+    <input type="text" id="getReservationId" placeholder="reservation id"/>
+    <input type="submit" id="submitClient" value="Submit" onclick= "getReservation()"/> 
+    <p id="getClientId"></p>
+    <p id="getDate"></p>
+    <p id="getHotelName"></p>
+    <p id="getPrice"></p>
+    <p id="getBalance"></p>
+    </p>
+</table>  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./clients/createClient.js"></script>
+    <script src="./clients/deleteClient.js"></script>
+    <script src="./clients/getClient.js"></script>
+    <script src="./clients/updateClient.js"></script>
+
+    <script src="./resercvations/createReservation.js"></script>
+    <script src="./resercvations/deleteReservation.js"></script>
+    <script src="./resercvations/getReservation.js"></script>
+    <script src="./resercvations/updateReservation.js"></script>
+
+
+
+
+
+
+</html>
