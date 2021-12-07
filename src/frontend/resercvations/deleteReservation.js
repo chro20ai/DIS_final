@@ -1,4 +1,4 @@
-let deleteReservationID = document.getElementById("deleteReservationId")
+let deleteReservationId = document.getElementById("deleteReservationId")
   
 //Validere om oplysniger er korrekte.
 function deleteReservation() {
@@ -10,7 +10,7 @@ function deleteReservation() {
             let userdata = {
                 reservationId : deleteReservationId.value
             }
-            console.log(deleteReservationID.value)
+            console.log(deleteReservationId.value)
             //let user = new User (userdata)
         
             axios.delete("https://localhost:8080/clients/reservations", { data: {userdata}})

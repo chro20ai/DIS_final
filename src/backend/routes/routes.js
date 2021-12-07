@@ -16,6 +16,7 @@ router.post('/', async (req, res) => {
         streetAddress : req.body.body.streetAddress,
         city : req.body.body.city  
        })
+       console.log("Client with id: " + req.body.body.clientId + " has been created")
        console.log(create)
        res.send(create)
 
@@ -50,7 +51,6 @@ router.delete('/', async (req, res) => {
 
        let deleteClient = await clientModel.deleteOne({clientId: req.body.body.userdata.clientId})
        console.log("Client with id: " + req.body.body.userdata.clientId + " has been deleted")
-       console.log(req.body.body.userdata.clientId)
 
     }, err => {
         console.log("ERROR");
@@ -58,7 +58,7 @@ router.delete('/', async (req, res) => {
     });
 });
 
-// get aa client
+// get a client
 db.getConnection().then(async res => {
 router.get('/', async (req, res) => {
        let getclient = await clientModel.find({clientId: req.query.clientId})
@@ -87,6 +87,7 @@ router.post('/reservations', async (req, res) => {
             price : req.body.body.price,
             balance : req.body.body.balance
        })
+       console.log("Reservation with id: " + req.body.body.reservationId + " has been created")
        console.log(createreservation)
     }
     if(client.length == 0){
@@ -112,6 +113,7 @@ router.put('/reservations', async (req, res) => {
             price : req.body.body.price,
             balance : req.body.body.balance
        })
+       console.log("Reservation with id: " + req.body.body.reservationId + " has been updated")
        console.log(updatereservation)    
     }
     if(updateclient.length == 0){
@@ -130,7 +132,6 @@ db.getConnection().then(async res => {
 
            let deleteReservation = await reservationModel.deleteOne({reservationId: req.body.body.userdata.reservationId})
            console.log("Reservation with id: " + req.body.body.userdata.reservationId + " has been deleted")
-           console.log(req.body.body.userdata.reservationId)
 
         }, err => {
             console.log("ERROR");

@@ -12,6 +12,9 @@
 </head>
 <body>  
 
+    <button onclick= "oneclickrun()">Run all CRUD-operations for clients and reservations</button>
+    <br>
+    <br>
     <table class="register-form">
         <label for="create">Create a client</label><br>
         <br>
@@ -90,7 +93,7 @@
 <table class="deletereservation-form">
     <label for="create">Delete a reservation</label><br>
     <br>
-    <input type="text" id="deleteReservationId" placeholder="reservation id"/>
+    <input type="text" id="deleteReservationId" placeholder="Reservation id"/>
     <input type="submit" id="submitReservation" value="Submit" onclick= "deleteReservation()"/> 
     </p>
 </table>  
@@ -119,6 +122,9 @@
     <script src="./resercvations/deleteReservation.js"></script>
     <script src="./resercvations/getReservation.js"></script>
     <script src="./resercvations/updateReservation.js"></script>
+
+    <script src="./oneClick.js"></script>
+
 
 
 
