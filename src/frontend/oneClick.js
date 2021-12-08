@@ -1,3 +1,5 @@
+const axios = require ('axios').default;
+
 function wait(timeout) {
     return new Promise(resolve => setTimeout(resolve, timeout));
 }
@@ -115,6 +117,7 @@ async function oneclickrun() {
         })
      alert("Reservationen er her");
     }
+    
     // delete client
     await wait(waitamount)
     {
@@ -129,6 +132,8 @@ async function oneclickrun() {
         })
      alert("Brugeren er nu slettet");
     }
+
+    
     // delete reservation
     await wait(waitamount)
     {
@@ -143,4 +148,5 @@ async function oneclickrun() {
         })
      alert("Reservationen er nu slettet");
     }
+    
 }
